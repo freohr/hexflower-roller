@@ -15,6 +15,7 @@ def parse_args():
                         help="Number of navigation steps to take in the hex-flower")
     parser.add_argument("-i", "--start", required=False, type=int,
                         help="Override the starting hex number from the configuration file")
+    parser.add_argument("-v", "--verbose", required=False, action='store_true')
 
     args = parser.parse_args()
     return args
@@ -31,7 +32,11 @@ def main():
 
     with (open(args.config)) as config_data:
         json_config = json.load(config_data)
-        flower_config = Parser.parse_config(json_config)
+        flower_config = Parser.parse_config(json_config, args.verbose)
+
+        print(f"{flower_config.description}\n")
+
+        # Traversing the flower
         current_hex = flower_config.get_starting_hex()
         print(current_hex)
 

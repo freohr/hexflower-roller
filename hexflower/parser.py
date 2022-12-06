@@ -6,9 +6,10 @@ from typing import Dict
 
 
 class Flower:
-    def __init__(self, nav: Navigator, hex_list: Dict[int, Hexagon]):
+    def __init__(self, nav: Navigator, hex_list: Dict[int, Hexagon], desc: str):
         self.navigator = nav
         self.hex_list = hex_list
+        self.description = desc
         pass
 
     def get_starting_hex(self):
@@ -54,9 +55,16 @@ def parse_hex_list(lst: list):
     return hex_dict
 
 
-def parse_config(dct: dict):
+def parse_config(dct: dict, verbose: bool = False):
     parsed_navigator = parse_navigator(dct["navigator"])
     parsed_hexes = parse_hex_list(dct["hex-list"])
-    hex_flower = Flower(parsed_navigator, parsed_hexes)
+
+    extra_desc = ""
+    if verbose:
+        extra_desc = f'{dct["comment"]["description"]}\n{dct["comment"]["additional_info"]}'
+    else:
+        extra_desc = f'{dct["comment"]["description"]}'
+    description = f'{extra_desc}\n\nSource: {dct["comment"]["source"]}'
+    hex_flower = Flower(parsed_navigator, parsed_hexes, description)
 
     return hex_flower
