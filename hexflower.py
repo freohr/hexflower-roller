@@ -40,9 +40,9 @@ def main():
         current_hex = flower_config.get_starting_hex()
         print(current_hex)
 
-        for i in range(0, args.steps):
+        for i in range(1, args.steps):
             current_hex = flower_config.navigate(current_hex)
-            print(current_hex)
+            print(f"{i}. {current_hex}")
 
 
 if __name__ == "__main__":
