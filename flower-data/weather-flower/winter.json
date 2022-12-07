@@ -1,0 +1,254 @@
+{
+  "comment": {
+    "source": "https://korbohned.de/product/4-seasons-weather-table/",
+    "description": "KorbohneD's hex-flower for weather generation. This one is Winter.",
+    "additional_info": "Instructions on how to initiate the hex-flower are on the linked website (using a 2d6 random table), then use the \"--start\" parameter to start the traversal. An exclamantion mark (!) suggests severe and hindering conditions. Two marks (!!) may indicate extreme weather, preventing movement."
+  },
+  "navigator": {
+    "formula": "2d6",
+    "start": 6,
+    "navigation": {
+      "2": "top_left",
+      "3": "bottom_left",
+      "4": "bottom_left",
+      "5": "bottom",
+      "6": "bottom",
+      "7": "bottom_right",
+      "8": "top_right",
+      "9": "self",
+      "10": "self",
+      "11": "top",
+      "12": "top_left"
+    }
+  },
+  "hex-list": [
+    {
+      "id": 1,
+      "content": "Light Snowfall (!)",
+      "neighbours": {
+        "top": 5,
+        "top_left": 2,
+        "top_right": 3,
+        "bottom": 1,
+        "bottom_left": 6,
+        "bottom_right": 4
+      }
+    },
+    {
+      "id": 2,
+      "content": "Windy & Snowy (!)",
+      "neighbours": {
+        "top": 7,
+        "top_left": 4,
+        "top_right": 5,
+        "bottom": 2,
+        "bottom_left": 11,
+        "bottom_right": 1
+      }
+    },
+    {
+      "id": 3,
+      "content": "Sleet",
+      "neighbours": {
+        "top": 8,
+        "top_left": 5,
+        "top_right": 6,
+        "bottom": 18,
+        "bottom_left": 1,
+        "bottom_right": 9
+      }
+    },
+    {
+      "id": 4,
+      "content": "Blizzard (!!)",
+      "neighbours": {
+        "top": 9,
+        "top_left": 1,
+        "top_right": 7,
+        "bottom": 14,
+        "bottom_left": 4,
+        "bottom_right": 2
+      }
+    },
+    {
+      "id": 5,
+      "content": "Wet Snowfall (!)",
+      "neighbours": {
+        "top": 10,
+        "top_left": 7,
+        "top_right": 8,
+        "bottom": 1,
+        "bottom_left": 2,
+        "bottom_right": 3
+      }
+    },
+    {
+      "id": 6,
+      "content": "Icy & Cloudy",
+      "neighbours": {
+        "top": 11,
+        "top_left": 8,
+        "top_right": 1,
+        "bottom": 16,
+        "bottom_left": 3,
+        "bottom_right": 14
+      }
+    },
+    {
+      "id": 7,
+      "content": "Snowy Rain (!)",
+      "neighbours": {
+        "top": 12,
+        "top_left": 9,
+        "top_right": 10,
+        "bottom": 2,
+        "bottom_left": 4,
+        "bottom_right": 5
+      }
+    },
+    {
+      "id": 8,
+      "content": "Cold & Cloudy",
+      "neighbours": {
+        "top": 13,
+        "top_left": 10,
+        "top_right": 11,
+        "bottom": 3,
+        "bottom_left": 5,
+        "bottom_right": 6
+      }
+    },
+    {
+      "id": 9,
+      "content": "Hail (!)",
+      "neighbours": {
+        "top": 14,
+        "top_left": 3,
+        "top_right": 12,
+        "bottom": 4,
+        "bottom_left": 18,
+        "bottom_right": 7
+      }
+    },
+    {
+      "id": 10,
+      "content": "Cold & Humid",
+      "neighbours": {
+        "top": 15,
+        "top_left": 12,
+        "top_right": 13,
+        "bottom": 5,
+        "bottom_left": 7,
+        "bottom_right": 8
+      }
+    },
+    {
+      "id": 11,
+      "content": "Cold Winds",
+      "neighbours": {
+        "top": 16,
+        "top_left": 13,
+        "top_right": 2,
+        "bottom": 6,
+        "bottom_left": 8,
+        "bottom_right": 17
+      }
+    },
+    {
+      "id": 12,
+      "content": "Clear & Windy",
+      "neighbours": {
+        "top": 17,
+        "top_left": 14,
+        "top_right": 15,
+        "bottom": 7,
+        "bottom_left": 9,
+        "bottom_right": 10
+      }
+    },
+    {
+      "id": 13,
+      "content": "Cold Rain Showers (!)",
+      "neighbours": {
+        "top": 18,
+        "top_left": 15,
+        "top_right": 16,
+        "bottom": 8,
+        "bottom_left": 10,
+        "bottom_right": 11
+      }
+    },
+    {
+      "id": 14,
+      "content": "Cold & Clear",
+      "neighbours": {
+        "top": 4,
+        "top_left": 6,
+        "top_right": 17,
+        "bottom": 9,
+        "bottom_left": 19,
+        "bottom_right": 12
+      }
+    },
+    {
+      "id": 15,
+      "content": "Cold Fog Wafts",
+      "neighbours": {
+        "top": 19,
+        "top_left": 17,
+        "top_right": 18,
+        "bottom": 10,
+        "bottom_left": 12,
+        "bottom_right": 13
+      }
+    },
+    {
+      "id": 16,
+      "content": "Heavy Rain (!)",
+      "neighbours": {
+        "top": 6,
+        "top_left": 18,
+        "top_right": 4,
+        "bottom": 11,
+        "bottom_left": 16,
+        "bottom_right": 19
+      }
+    },
+    {
+      "id": 17,
+      "content": "Cloudy & Nippy",
+      "neighbours": {
+        "top": 17,
+        "top_left": 11,
+        "top_right": 19,
+        "bottom": 12,
+        "bottom_left": 14,
+        "bottom_right": 15
+      }
+    },
+    {
+      "id": 18,
+      "content": "Light Drizzle",
+      "neighbours": {
+        "top": 3,
+        "top_left": 19,
+        "top_right": 9,
+        "bottom": 13,
+        "bottom_left": 15,
+        "bottom_right": 16
+      }
+    },
+    {
+      "id": 19,
+      "content": "Sunny & Nippy",
+      "neighbours": {
+        "top": 19,
+        "top_left": 16,
+        "top_right": 14,
+        "bottom": 15,
+        "bottom_left": 17,
+        "bottom_right": 18
+      }
+    }
+  ]
+}
